@@ -7,5 +7,7 @@ console.log('router loaded');
 
 router.get('/', questionController.home);
 
+// this is the entry point of all the api named url's
+router.use('/api', require('./api/index'));
 
 module.exports = router;
