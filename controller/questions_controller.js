@@ -10,14 +10,15 @@ module.exports.create = async function(request, respond){
     console.log(request.url);
     console.log(request.body);
 
-    await Question.create(Request.body, function(err, ques){
-        if(err){
-            console.log('error in creating the question schema', err);
-        }
+    try {
+        const ques = await Question.create(request.body);
 
         console.log(ques);
         respond.send(ques);
-    })
+    }catch(err){
+        console.log('error in creating the question schema', err);
+    }
+    
 }
 
 module.exports.showDetails = async function(request, respond){

@@ -38,7 +38,7 @@ module.exports.add_vote = async function(request, respond){
         }
         // handling the bad requests
         else{
-            respond.senf('option does not exists');
+            respond.send('option does not exists');
         }
 
 }
