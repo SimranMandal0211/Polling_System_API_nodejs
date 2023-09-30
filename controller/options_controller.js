@@ -3,7 +3,7 @@ const Option = require('../models/options');
 
 module.exports.create = async function(request, respond){
     // in this we will create the options to the od given question
-    console.log(request.body, request.param.id);
+    console.log(request.body, request.params.id);
     const opt = await Option.create({
         option: request.body.content,
         question: request.params.id,

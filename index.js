@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({extended: true}))
 const db = require('./config/mongoose');
 
 // routes
-app.use('/', require('./routes'));
+app.use('/', require('./routes/index'));
 
 
 app.listen(Port, (err) => {

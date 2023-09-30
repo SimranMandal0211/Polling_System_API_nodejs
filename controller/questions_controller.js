@@ -15,9 +15,10 @@ module.exports.create = async function(request, respond){
 
         console.log(ques);
         respond.send(ques);
-    }catch(err){
+      }catch(err){
         console.log('error in creating the question schema', err);
-    }
+        respond.status(500).json({ err: 'Internal server error' });
+      }    
     
 }
 

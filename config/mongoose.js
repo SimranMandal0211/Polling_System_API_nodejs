@@ -1,6 +1,11 @@
 const mongoose = require('mongoose');
 mongoose.connect('mongodb://0.0.0.0/Polling_System_API');
 
+const connectParams={
+    useNewUrlParser:true,
+    useUnifiedTopology:true
+}
+
 // code for manually using the mongodb of local system
 const db = mongoose.connection;
 
